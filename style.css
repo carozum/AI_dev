@@ -12,6 +12,7 @@ Extra extra large	≥ 1400px
     --main-green: #689679;
     --main-black: #1F1F1F;
     --main-orange: #E58980;
+    --vert-clair: #f1faf4;
 
 }
 
@@ -40,6 +41,10 @@ body{
 .col-3{
     width: 30%;
     margin: 0 0.5rem;
+}
+
+.experiences, .formations, .resume{
+    padding: 16px;
 }
 
 /* ____________________navigation___________________ */
@@ -128,6 +133,7 @@ body{
 /* __________________skills__________________ */
 .skills{
     padding: 16px;
+    background-color: var(--vert-clair);
 }
 .skill{
     padding: 12px;
@@ -145,6 +151,14 @@ body{
     list-style-type:'. '; 
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
+}
+
+/* __________________Experiences__________________ */
+
+
+/* ___________________Formations__________________ */
+.formations{
+    background-color: var(--vert-clair);
 }
 
 /* ____________________Footer__________________ */
