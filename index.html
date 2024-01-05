@@ -4,42 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <title>Skills Dev AI</title>
+    <title>Développeur AI</title>
 </head>
 
 <body>
     <header class="header">
-        <nav>
-            <p class="logo"><a href="index.html">@carozum</a></p>
+        <nav class="nav">
+            <p class="logo"><a href="index.html"><i class="fa fa-home fa-2x"></i></a></p>
+            <ul class="navbar">
+                <li class="navbar-link"><a href="index.html#skills">Skills</a></li>
+                <li class="navbar-link"><a href="index.html#experiences">Expériences</a></li>
+                <li class="navbar-link"><a href="index.html#formations">Formations</a></li>
+                <li class="navbar-link"><a href="https://github.com/carozum" target="_blank">Portfolio</a></li>
+                <li class="navbar-link"><a href="other.html">Intérêts</a></li>
+                <li class="navbar-link"><a href="veilles/sommaire-veilles.html">Veilles</a></li>
+            </ul>
         </nav>
-        <section class="hero">
-            <h1>Skills Dev AI by Carozum</h1>
+
+        <section class="me">
+            <div class="me-infos">
+                <p class="me-adresse"><i class="fa fa-map"></i> Pays Basque - Toulouse - Remote</p>
+                <a class="me-mail" href="mailto:test-caro@gmail.com"><i class="fa fa-envelope"></i> Me contacter</a>
+                <!-- Ajouter le logo linked in -->
+
+                <a href="www.linkedin.com/in/carozum" class="me-linkedIn"><i class="fa fa-linkedin"></i> Profil
+                    LinkedIn</a>
+                <a href="www.https://github.com/carozum" class="me-github"><i class="fa fa-github"></i> Profil
+                    GitHub</a>
+            </div>
+            <div class="me-image">
+                <img src="photo-caro-cv.png" alt="une photo de caroline zumbiehl souriante" class="me-photo">
+            </div>
+
+
         </section>
+
+
+        <section class="pres">
+            <h1 class="pres-titre">Caroline Zumbiehl</h1>
+            <p class="pres-soustitre">Développeur d’applications-Data-AI </p>
+            <p class=" pres-accroche mb-1">Ingénieur de l’école des Ponts-Paris Tech.</p>
+            <p class=" pres-accroche mb-1">Mise en place de solutions d'IA générative pour optimiser le business des
+                entreprises.</p>
+            <p class=" pres-accroche mb-1">Développement d’applications, analyse de données, modèles statistiques et
+                prédictions (ML): Python /
+                SQL
+                / Power BI.</p>
+            <p class=" pres-accroche mb-1">Chef de projet Web (design, code, SEO, gestion de projet).</p>
+
+        </section>
+
+
     </header>
 
     <main>
-        <section class="skill">
-            <h2>Python</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas eius beatae nobis repudiandae, aperiam
-                praesentium ipsa aut nostrum fuga, laudantium vel ex esse recusandae distinctio aliquid! Quo
-                consequuntur aperiam deleniti.</p>
+        <!-- Skills -->
+        <section id="skills" class="row">
+            <section class="skill col-4">
+                <h2 class="skill-titre">Data</h2>
+                <ul class="skill-list">
+                    <li class="skill-item">Numpy, Pandas, Matplotlib, Seaborn, Dash, plotly</li>
+                    <li class="skill-item">Scikit Learn, Keras, TensorFlow</li>
+                    <li class="skill-item">Power BI, Dataiku, Tableau</li>
+                    <li class="skill-item">Google Sheets, Excel</li>
+                    <li class="skill-item">Azure, Generative AI</li>
+                </ul>
+            </section>
+            <section class="skill col-4">
+                <h2 class="still-titre">Développeur</h2>
+                <ul class="skill-list">
+                    <li class="skill-item">Python, Javascript, PHP, Django, Flask</li>
+                    <li class="skill-item">HTML5, CSS3, Bootstrap</li>
+                    <li class="skill-item">SQL, MySql, SQlite, Django ORM, SQLAlchemy</li>
+                    <li class="skill-item">Architecture MVC, API REST</li>
+                    <li class="skill-item">Wordpress, PHP</li>
+                    <li>Prototypage Figma XD, UX/UI</li>
+                </ul>
+
+
+
+            </section>
+
+            <section class="skill col-4">
+                <h2 class="skill-titre">Soft skills</h2>
+                <ul class="skill-list">
+                    <li class="skill-item">Travail en équipe agile scrum, Miro</li>
+                    <li class="skill-item">Résolution problèmes, créativité</li>
+                    <li class="skill-item">Auto-apprentissage, motivation</li>
+                    <li class="skill-item">Communication: discord, slack,</li>
+                    <li class="skill-item">Anglais, Permis B</li>
+                </ul>
+
+            </section>
         </section>
-        <section class="skill">
-            <h2>Git</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad quisquam non maiores tempora. Voluptatibus
-                natus eos vitae provident. Deserunt officia ea suscipit excepturi nobis, ullam exercitationem veniam
-                temporibus rerum quae.</p>
+
+
+
+        <!-- FORMATIONS -->
+        <section id="formations" class="row">
+            <h2 class="formations-titre">Formations</h2>
+            <section class="formation">
+                <h3 class="formation-titre">Ingénieur Bac+5</h3>
+                <p class="formation-image"></p>
+                <p class="formation-date">1999</p>
+                <p class="formation-soustitre">Ecole des Ponts Paris Tech</p>
+                <p class="formation-content">Spécialité mathématiques, informatique, finance</p>
+            </section>
+            <section class="formation">
+                <h3 class="formation-titre">Développeur Python</h3>
+                <p class="formation-image"></p>
+                <p class="formation-date">2023</p>
+                <p class="formation-soustitre">Treehouse Techdegree</p>
+            </section>
+            <section class="formation">
+                <h3 class="formation-titre">Data Analyst</h3>
+                <p class="formation-image"></p>
+                <p class="formation-date">2023</p>
+                <p class="formation-soustitre">Ecole IA Microsoft by Simplon</p>
+            </section>
+
         </section>
-        <section class="skill">
-            <h2>Flask</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas eius beatae nobis repudiandae, aperiam
-                praesentium ipsa aut nostrum fuga, laudantium vel ex esse recusandae distinctio aliquid! Quo
-                consequuntur aperiam deleniti.</p>
-        </section>
+
+
 
 
     </main>
+    <footer class="footer">
+        <p>Made with enthousiasm by @carozum</p>
+    </footer>
 
 
     <script src="script.js"></script>
