@@ -1,4 +1,11 @@
-
+/* 
+X-Small	< 576px
+Small	≥ 576px
+Medium	≥ 768px
+Large	≥ 992px
+Extra large	≥ 1200px
+Extra extra large	≥ 1400px
+*/
 
 :root{
     --dark-green:#27362c;
@@ -24,6 +31,15 @@ body{
 }
 .mb-1{
     padding-bottom: 0.5rem;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.col-3{
+    width: 30%;
+    margin: 0 0.5rem;
 }
 
 /* ____________________navigation___________________ */
@@ -109,4 +125,56 @@ body{
     color: var(--dark-green);
 }
 
+/* __________________skills__________________ */
+.skills{
+    padding: 16px;
+}
+.skill{
+    padding: 12px;
+}
+.skill-titre{
+    text-align: center;
+    color:var(--main-green);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--dark-green);
+}
+.skill-list{
+    padding: 8px;
+}
+.skill-item{
+    list-style-type:'. '; 
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
 
+/* ____________________Footer__________________ */
+
+.footer{
+    font-size: 0.8rem;
+}
+.footer-legal h4{
+    padding-bottom: 0.7rem;
+}
+.footer-legal{
+    background-color: var(--main-orange);
+    justify-content:center;
+    padding: 16px 0;
+}
+.footer-legal ul{
+    padding: 0;
+}
+.footer-legal li{
+    list-style-type: none;
+    padding-bottom: 0.5rem;
+    /* text-align: center; */
+}
+.footer-legal a{
+    color: var(--dark-green);
+}
+
+.footer-end{
+    background-color: var(--dark-green);
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+}
