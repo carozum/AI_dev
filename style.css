@@ -184,6 +184,9 @@ body{
 .phase2{
     margin-left:auto;
 }
+.experience-item ul{
+    font-size:0.9rem;
+}
 
 /* ___________________Formations__________________ */
 .formations{
@@ -237,4 +240,48 @@ body{
     color: white;
     text-align: center;
     padding: 16px 0;
+}
+
+
+
+/* _____________________ other___________________ */
+.col-2{
+    width: 50%;
+}
+.col-2 .experience-image{
+    width: 100%;
+}
+.btn-other{
+    background-color: var(--dark-green);
+    color:white;
+    border-radius: 8px;
+    padding: 10px 24px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: block;
+    margin:10px auto 0;
+}
+.btn-other a{
+    text-decoration: none;
+    color: white;
+}
+.btn-other i{
+    color: white;
+}
+.btn-other:hover{
+    border: 1px solid var(--dark-green);
+    background-color: var(--main-orange);
+    font-weight: bold;
+}
+.btn-other:hover a{
+    color: var(--dark-green);
+}
+.btn-other:hover i{
+    color: var(--dark-green);
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

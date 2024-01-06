@@ -1,14 +1,146 @@
-<h1>Intérêts</h1>
-<h2>Photo</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum porro omnis quia. Distinctio ea, asperiores
-    earum rem libero minus nihil enim sequi, eveniet magni inventore ullam et dolorem laboriosam.</p>
+<!DOCTYPE html>
+<html lang="fr">
 
-<h2>Course à pied</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, dolorum quisquam debitis dolore temporibus esse.
-    Atque, officia mollitia. Porro commodi tempore, tempora ipsa autem delectus praesentium accusamus temporibus
-    consectetur fugit?</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Développeur AI</title>
+</head>
 
-<h2>Lecture</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid blanditiis esse maiores. Deserunt, eveniet pariatur
-    laboriosam ducimus, praesentium quis harum illum unde aliquid dicta quisquam corrupti velit expedita obcaecati
-    iusto?</p>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <p class="logo"><a href="index.html"><i class="fa fa-home fa-2x"></i></a></p>
+            <ul class="navbar">
+                <li class="navbar-link"><a href="index.html#skills">Skills</a></li>
+                <li class="navbar-link"><a href="index.html#experiences">Expériences</a></li>
+                <li class="navbar-link"><a href="index.html#formations">Formations</a></li>
+                <li class="navbar-link"><a href="https://github.com/carozum" target="_blank">Portfolio</a></li>
+                <li class="navbar-link"><a href="other.html">Intérêts</a></li>
+                <li class="navbar-link"><a href="veilles/sommaire-veilles.html">Veilles</a></li>
+                <li class="navbar-link"><a href="flash_cards/sommaire-flash-cards.html">FlashCards</a></li>
+            </ul>
+        </nav>
+
+        <section class="me">
+            <div class="me-infos">
+                <p class="me-adresse"><i class="fa fa-map"></i> Pays Basque - Toulouse - Remote</p>
+                <a class="me-mail" href="mailto:test-caro@gmail.com"><i class="fa fa-envelope"></i> Me contacter</a>
+                <!-- Ajouter le logo linked in -->
+
+                <a href="www.linkedin.com/in/carozum" class="me-linkedIn"><i class="fa fa-linkedin"></i> Profil
+                    LinkedIn</a>
+                <a href="www.https://github.com/carozum" class="me-github"><i class="fa fa-github"></i> Profil
+                    GitHub</a>
+            </div>
+            <div class="me-image">
+                <img src="assets/images/photo-caro-cv.png" alt="une photo de caroline zumbiehl souriante"
+                    class="me-photo">
+            </div>
+        </section>
+
+
+        <section class="pres">
+            <h1 class="pres-titre">Développeur mais pas que...</h1>
+            <p class="pres-soustitre">Photos, courses, lecture... d'autres centres d'intérêt</p>
+            <p class=" pres-accroche mb-1">Juste pour presenter d'autres activités que j'aime beaucoup.</p>
+
+        </section>
+
+
+    </header>
+
+    <main>
+        <section id="experiences" class="experiences">
+            <!-- <h2 class="experiences-titre">Photos</h2> -->
+
+            <!-- experience phase 1 -->
+            <section class="experience phase1">
+                <h2 class="experience-titre">Photos</h2>
+                <div class="row">
+                    <div class="experience-item col">
+                        <h4 class="item-soustitre">Photographe amateur</h4>
+                        <p class="item-content">Exposition photos sur mon compte Unsplash</p>
+                        <button class="btn-other"><i class="fa fa-arrow-right"></i> <a
+                                href="https://unsplash.com/fr/@carozum" target="_blank">Unsplash</a></button>
+                    </div>
+                    <div class="experience-image col-2">
+                        <img class="experience-image" src="assets/images/unsplash.jpeg"
+                            alt="une photo issue du compte Unsplash de Carozum représentant un troupeau de moutons dans le pays Basque, France">
+                    </div>
+                </div>
+            </section>
+            <!-- experience phase 2 -->
+            <section class="experience phase2">
+                <h2 class="experience-titre">Lecture</h2>
+                <div class="row">
+                    <div class="experience-item col">
+                        <h4 class="item-soustitre">Book Lover</h4>
+                        <p class="item-content">Un blog de lecture réalisé sous Wix.</p>
+                        <button class="btn-other"><i class="fa fa-arrow-right"></i> <a
+                                href="https://czumbiehlfaure.wixsite.com/toulouzumlivres"
+                                target="_blank">Toulouzum</a></button>
+                    </div>
+                    <div class="experience-image col-2 col">
+                        <img class="experience-image" src="assets/images/toulouzum.jpg"
+                            alt="une photo issue du compte Unsplash de Carozum représentant un une librairie dans une rue d'Aix en Provence">
+                    </div>
+                </div>
+            </section>
+            <!-- experience phase 3 -->
+            <section class="experience phase3">
+                <h3 class="experience-titre">Course à pieds</h3>
+                <div class="row">
+                    <div class="experience-item col">
+                        <h4 class="item-soustitre">Coureur enthousiaste</h4>
+                        <p class="item-content">Participation aux courses locales ou engagées. </p>
+                        <ul>
+                            <li>Biarrose</li>
+                            <li>Canadian Race</li>
+                            <li>Foulée des Festayres</li>
+                        </ul>
+                    </div>
+                    <div class="experience-image col-2 col">
+                        <img class="experience-image" src="assets/images/courses.jpg"
+                            alt="une photo issue du compte Unsplash de Carozum représentant un monument aux morts canadien dans le nord de la France. Course du souvenir. ">
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row footer-legal">
+            <div class="col-3">
+                <h4>Plan du site</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="other.html">Intérêts</a></li>
+                    <li><a href="veilles/sommaire-veilles.html">Veilles</a></li>
+                    <li><a href="flash_cards/sommaire-flash-cards.html">FlashCards</a></li>
+                </ul>
+
+            </div>
+            <div class="col-3">
+                <p>C'était un petit aperçu rapide... Vous pouvez aussi télécharger
+                    mon CV en
+                    cliquant sur le bouton ci-dessous.</p>
+                <form method="get" action="assets/files/CV_caroline_zumbiehl_Web.pdf">
+                    <button class="btn-cv"><i class="fa fa-download"></i> Télécharger mon CV en pdf</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer-end">Made with enthousiasm by @carozum</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
