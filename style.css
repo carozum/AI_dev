@@ -192,6 +192,15 @@ body{
 .formations{
     background-color: var(--vert-clair);
 }
+.formation{
+    text-align: center;
+}
+.formation-image{
+    height: 100px;
+    display: block;
+    margin: auto;
+    text-align:center;
+}
 
 /* ________________Télécharger le cv_______________ */
 .btn-cv {
