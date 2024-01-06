@@ -55,7 +55,9 @@ body{
     padding-bottom: 50px;
     padding-top: 40px;
 }
-
+.content{
+    padding: 16px;
+}
 /* ____________________navigation___________________ */
 .nav{
     background-color: var(--dark-green);
