@@ -155,8 +155,9 @@ body{
 
 /* __________________Experiences__________________ */
 .experience{
-    /* border: 1px solid var(--main-green); */
-    box-shadow:3px 5px 8px var(--main-green);
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
     margin: 16px 0;
     padding: 16px;
     width: 80%;
@@ -187,6 +188,23 @@ body{
 /* ___________________Formations__________________ */
 .formations{
     background-color: var(--vert-clair);
+}
+
+/* ________________Télécharger le cv_______________ */
+.btn-cv {
+    background-color: var(--main-orange);
+    color: var(--dark-green);
+    border: 1px solid var(--dark-green);
+    border-radius: 8px;
+    padding: 6px 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: block;
+    margin:10px auto 0;
+}
+.btn-cv:hover{
+    background-color: var(--dark-green);
+    color: white;
 }
 
 /* ____________________Footer__________________ */
