@@ -47,6 +47,15 @@ body{
     padding: 16px;
 }
 
+.bg-vert{
+    padding: 24px;
+    background-color: var(--vert-clair);
+}
+.main-section{
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
 /* ____________________navigation___________________ */
 .nav{
     background-color: var(--dark-green);
@@ -111,9 +120,7 @@ body{
     text-align: center;
     padding: 16px;
 }
-.pres {
-    margin-bottom: 2rem;
-}
+
 .pres-titre{
     color: var(--main-green);
     font-size: 3rem;
@@ -131,10 +138,6 @@ body{
 }
 
 /* __________________skills__________________ */
-.skills{
-    padding: 16px;
-    background-color: var(--vert-clair);
-}
 .skill{
     padding: 12px;
 }
@@ -189,9 +192,7 @@ body{
 }
 
 /* ___________________Formations__________________ */
-.formations{
-    background-color: var(--vert-clair);
-}
+
 .formation{
     text-align: center;
 }
@@ -293,4 +294,21 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+
+/* ___________________Veilles / flashcards sommaire_________ */
+
+
+
+.veilles .col-3,
+.flashcards .col-3{
+    text-align: center;
+    padding: 12px;
+    border: 1px solid var(--main-green);
+    box-shadow: 5px 8px 4px #777;
+}
+.veilles h2,
+.flashcards h2{
+    margin-bottom: 24px;
 }
