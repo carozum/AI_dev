@@ -154,7 +154,35 @@ body{
 }
 
 /* __________________Experiences__________________ */
+.experience{
+    /* border: 1px solid var(--main-green); */
+    box-shadow:3px 5px 8px var(--main-green);
+    margin: 16px 0;
+    padding: 16px;
+    width: 80%;
+    max-width: 800px;
+}
+.experiences-titre, .formations-titre{
+    color: var(--main-green);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--dark-green);
+    max-width: 200px;
+    margin-bottom: 16px;
+}
+.experience-titre{
+    color: var(--main-orange);
+    margin: 8px 0 4px 0;
+}
 
+.item-soustitre{
+    margin: 6px 0;
+}
+.item-content{
+    font-size: 0.9rem;
+}
+.phase2{
+    margin-left:auto;
+}
 
 /* ___________________Formations__________________ */
 .formations{
