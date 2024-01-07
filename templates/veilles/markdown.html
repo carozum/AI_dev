@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+    <title>Flask</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <p class="logo"><a href="index.html"><i class="fa fa-home fa-2x"></i></a></p>
+            <ul class="navbar">
+                <li class="navbar-link"><a href="index.html#skills">Skills</a></li>
+                <li class="navbar-link"><a href="index.html#experiences">Expériences</a></li>
+                <li class="navbar-link"><a href="index.html#formations">Formations</a></li>
+                <li class="navbar-link"><a href="https://github.com/carozum" target="_blank">Portfolio</a></li>
+                <li class="navbar-link"><a href="other.html">Intérêts</a></li>
+                <li class="navbar-link"><a href="sommaire-veilles.html">Veilles</a></li>
+                <li class="navbar-link"><a href="sommaire-flash-cards.html">FlashCards</a></li>
+            </ul>
+        </nav>
+
+        <section class="me">
+            <div class="me-infos">
+                <p class="me-adresse"><i class="fa fa-map"></i> Pays Basque - Toulouse - Remote</p>
+                <a class="me-mail" href="mailto:test-caro@gmail.com"><i class="fa fa-envelope"></i> Me contacter</a>
+                <!-- Ajouter le logo linked in -->
+
+                <a href="www.linkedin.com/in/carozum" class="me-linkedIn"><i class="fa fa-linkedin"></i> Profil
+                    LinkedIn</a>
+                <a href="www.https://github.com/carozum" class="me-github"><i class="fa fa-github"></i> Profil
+                    GitHub</a>
+            </div>
+            <div class="me-image">
+                <img src="../../assets/images/photo-caro-cv.png" alt="une photo de caroline zumbiehl souriante"
+                    class="me-photo">
+            </div>
+        </section>
+
+
+        <section class="pres bg-vert">
+            <h1 class="pres-titre">Veilles Flask</h1>
+            <p class="pres-soustitre">Markdown cheat sheet</p>
+            <!-- <p class=" pres-accroche mb-1"> -->
+            </p>
+        </section>
+    </header>
+
+    <section class="breadcrumb main-content content">
+        <p><a href="../../sommaire-veilles.html">Sommaire Veilles</a></p>
+    </section>
+
+    <main class="veilles main-section">
+
+        <!-- section 1 installation -->
+        <section class="main-section content">
+
+            <p>Markdown is a short-hand syntax for easily converting text to HTML. Below are some popular examples of
+                Markdown
+                formatting. For further documentation and more examples, reference this external resource.</p>
+
+            <h2>Headlines</h2>
+            <p>
+            <pre>
+    # h1
+    ## h2
+    ### h3
+    #### h4 ...
+</pre>
+            </p>
+
+
+            <h2>Links</h2>
+            <p>This is an [example link](http://example.com/). Renders as:</p>
+
+            <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+This is an <span style="color: blue; text-decoration: underline;">example link</span></pre>
+
+            <h2>Code Block</h2>
+            <p>Wrap your code with 3 backticks (```) on the line before and after. If you specify the language after the
+                first set
+                of backticks, that'll help us with syntax highlighting.
+
+            <pre>
+    ```css
+    .fun {
+    background-color: yellow;
+    color: pink;
+    font-size: 5000px;
+    }
+    ```</pre>
+            Renders as:</p>
+            <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+.fun {
+    background-color: yellow;
+    color: pink;
+    font-size: 5000px;
+}
+</pre>
+
+            <h2>Inline Code</h2>
+            <p>Code can also appear inline. Put a backtick (`) before and after the code. This line has inline code
+                `.fun`. Renders
+                as:</p>
+
+            <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+This line has inline code .fun</pre>
+
+            <h2>Quoting</h2>
+            <p>If you're replying to someone, you can copy portions of their text into your reply, and mark them as
+                quotations by
+                putting > at the start of each line.
+
+                > This line is quoted. Renders as:</p>
+
+
+            <blockquote style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+                This line is quoted.</blockquote>
+
+            <h2>Italic</h2>
+            <p>Here's a word that is *emphasized*
+
+                Renders as:</p>
+            <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+Here's a word that is <i>emphasized</i>
+</pre>
+
+            <h2>Bold</h2>
+            <p>Here's a word that is **bold**
+
+                Renders as:</p>
+            <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+Here's a word that is <b>bold</b></pre>
+
+            <h2>Images</h2>
+            <p>Format:
+
+            <pre>![alt text](/path/to/img.jpg "Title")</pre>
+
+            Example:
+
+            <pre>
+![The `result` Variable
+Type](https://treehouse-code-samples.s3.amazonaws.com/csharp/img/user-auth-with-aspnet-identity/s2t6-result-var-type.png)</pre>
+
+            Renders as:</p>
+            <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+The image !!</pre>
+
+
+            <h2>Unordered List</h2>
+            <p>
+            <pre>
++ Candy
++ Gum
++ Peanuts</pre>
+
+            Renders as:</p>
+            <blockquote>
+                <pre style=" background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+    This line is quoted.</blockquote></pre>
+
+                <h2>Italic</h2>
+                <p>Here's a word that is *emphasized*
+
+                    Renders as:</p>
+                <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+Here's a word that is <i>emphasized</i>
+</pre>
+
+                <h2>Bold</h2>
+                <p>Here's a word that is **bold**
+
+                    Renders as:</p>
+                <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+Here's a word that is <b>bold</b></pre>
+
+                <h2>Images</h2>
+                <p>Format:
+
+                <pre>![alt text](/path/to/img.jpg "Title")</pre>
+
+                Example:
+
+                <pre>
+![The `result` Variable
+Type](https://treehouse-code-samples.s3.amazonaws.com/csharp/img/user-auth-with-aspnet-identity/s2t6-result-var-type.png)</pre>
+
+                Renders as:</p>
+                <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+The image !!</pre>
+
+
+                <h2>Unordered List</h2>
+                <p>
+                <pre>
++ Candy
++ Gum
++ Peanuts</pre>
+
+                Renders as:</p>
+                <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+. Candy
+. Gum
+. Peanuts
+</pre>
+
+
+
+                <h2>Ordered List</h2>
+                <p>
+                <pre>>
+1. Red
+2. Green
+3. Blue
+</pre>
+                Renders as:</p>
+                <pre style="background-color:rgb(212, 213, 213); padding: 5px 0 5px 20px;">
+1. Red
+2. Green
+3. Blue</pre>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row footer-legal">
+            <div class="col-3">
+                <h4>Plan du site</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="other.html">Intérêts</a></li>
+                    <li><a href="veilles/sommaire-veilles.html">Veilles</a></li>
+                    <li><a href="flash_cards/sommaire-flash-cards.html">FlashCards</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <p>Contenu régulièrement mis à jour. N'hésitez pas à revenir prochainement et à mettre mes veilles
+                    dans
+                    vos favorites.</p>
+            </div>
+        </div>
+        <p class="footer-end">Made with enthousiasm by @carozum</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
