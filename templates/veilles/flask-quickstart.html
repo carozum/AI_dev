@@ -46,70 +46,74 @@
 
         <section class="pres bg-vert">
             <h1 class="pres-titre">Veilles Flask</h1>
-            <p class="pres-soustitre">Step 1 - Create the environment of my project</p>
+            <p class="pres-soustitre">Step 2 - Quickstart</p>
             <!-- <p class=" pres-accroche mb-1"> -->
             </p>
         </section>
     </header>
 
     <section class="breadcrumb main-content content">
-        <p></i> <a href="../../sommaire-veilles.html">Sommaire Veilles</a> <i class="fa fa-arrow-right"></i> <a
-                href="flask-quickstart.html">Page suivante</a></p>
+        <p><a href="flask-set-environment.html">Page précédente</a> <i class="fa fa-arrow-left"></i> <a
+                href="../../sommaire-veilles.html">Sommaire Veilles</a> <i class="fa fa-arrow-right"></i> <a
+                href="flask-add-templates.html">Page suivante</a></p>
     </section>
 
     <main class="veilles main-section">
 
         <!-- section 1 installation -->
         <section class="main-section content">
-            <h2>Installation</h2>
-            <ol>
-                <li>Create a folder for your project</li>
-                <li>Open your folder in your IDE</li>
-                <li>Open the terminal in your IDE</li>
-                <li>Create a virtual environment
-                    <ul>
-                        <li>Mac: python3 -m venv env</li>
-                        <li>Windows: python -m venv env</li>
-                    </ul>
-                </li>
-                <li>Activate your environment
-                    <ul>
-                        <li>Mac: source ./env/bin/activate</li>
-                        <li>Windows: .\env\Scripts\activate</li>
-                    </ul>
-                </li>
-                <li>Install Flask
-                    <ul>
-                        <li>pip install flask</li>
-                    </ul>
-                </li>
-                <li>Create requirements file
-                    <ul>
-                        <li>pip freeze > requirements.txt</li>
-                    </ul>
-                </li>
-                <li>Post it on GitHub
-                    <ul>
-                        <li>Create a .gitignore file</li>
-                        <li>Add inside: env, .vscode, /__pycache__, .DS_Store</li>
-                        <li>git init</li>
-                        <li>git add .</li>
-                        <li>git commit -m "comment"</li>
-                        <li>Create repo on git Hub</li>
-                        <li>git remote add ...</li>
-                        <li>git push origin main</li>
-                    </ul>
-                </li>
-            </ol>
+
+            <h2>Request Response Cycle</h2>
+            <p>The request - response cycle is where a user requests information from your site, your site determines
+                how to handle the request and what information to send back, and then a response is sent to the user.
+            </p>
+            <p><img src="../../assets/images/request_response.jpg" alt="Request response cycle" width="70%"></p>
+        </section>
+
+
+        <section class="main-section content">
+            <h2>Flask Quickstart</h2>
+
+            <pre><code class="python">
+                from flask import Flask
+            
+                app = Flask(__name__)
+            
+                @app.route('/')  # request
+                def index():
+                    return "hello from Pet Adoption"  # response
+            
+                @app.route('/set-environment')
+                def environment():
+                    return "Set your environment"
+            
+                if __name__ == '__main__':
+                    app.run(debug=True, port=8000, host='127.0.0.1')
+            
+                        </code></pre>
+            <p><strong>Namespaces</strong>__name__ is __main__ or the name of the file ex __app__</p>
+            <p><strong>First request/response, first route</strong>: a route is a command to run a specific function
+                which then returns
+                the response to the user.</p>
+            <p><strong>Decorator</strong> : decorators are function that wrap around other functions and let you do
+                things with
+                them.
+            </p>
+            <p>In the terminal, python3 app.py to run the flask app. </p>
         </section>
 
         <!-- Bookmarks -->
         <section class="bookmark content">
             <h2>Bookmarks</h2>
             <ul>
-                <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask Docs</a></li>
-                <li><a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja Docs</a></li>
-                <li><a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/">Flask - SQLAlchemy</a></li>
+                <li><a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#quickstart">Flask Quickstart</a>
+                </li>
+                <li><a
+                        href="https://levelup.gitconnected.com/demystifying-python-decorators-726f04963a52">Decorators</a>
+                </li>
+                <li><a
+                        href="https://betterprogramming.pub/6-things-to-know-to-demystify-namespaces-and-scopes-in-python-f5353c7ff56f">Namespace
+                        and scope</a></li>
             </ul>
         </section>
 
@@ -141,3 +145,12 @@
 </body>
 
 </html>
+
+
+
+<!-- Bookmarks -->
+<section class="bookmark">
+    <h2>Bookmarks</h2>
+
+</section>
+{% endblock %}

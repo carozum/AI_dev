@@ -7,8 +7,8 @@
     <!-- Font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <title>Veilles Développeur AI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <title>Flask</title>
 </head>
 
 <body>
@@ -38,46 +38,59 @@
                     GitHub</a>
             </div>
             <div class="me-image">
-                <img src="assets/images/photo-caro-cv.png" alt="une photo de caroline zumbiehl souriante"
+                <img src="../../assets/images/photo-caro-cv.png" alt="une photo de caroline zumbiehl souriante"
                     class="me-photo">
             </div>
         </section>
 
 
-        <section class="pres">
-            <h1 class="pres-titre">Veilles développeur AI</h1>
-            <p class="pres-soustitre">Mise à jour de connaissances.</p>
-            <p class=" pres-accroche mb-1">Aborde les différents domaines de compétences du dev AI et tente de les
-                synthétiser pour en faire le plus possible des documents auxquels on peut se rapporter quotidiennement.
+        <section class="pres bg-vert">
+            <h1 class="pres-titre">Veilles Flask</h1>
+            <p class="pres-soustitre">Step 4 - Static files</p>
+            <!-- <p class=" pres-accroche mb-1"> -->
             </p>
         </section>
     </header>
 
-    <main class="veilles main-section bg-vert">
-        <div class="row">
-            <div class="col-3">
-                <h3>Flask</h3>
-                <ul style="list-style-type: none; padding-inline-start: 0;">
-                    <li><a href="templates/veilles/flask-set-environment.html">1.Set up
-                            Environment</a></li>
-                    <li><a href="templates/veilles/flask-quickstart.html">2.Quickstart</a></li>
-                    <li><a href="templates/veilles/flask-add-templates.html">3.Add templates</a></li>
-                    <li><a href="templates/veilles/flask-static-files.html">4.Static Files</a></li>
-                    <li><a href="templates/veilles/flask-template-inheritance.html">5.Template inheritance</a></li>
-                    <li><a href="templates/veilles/flask-form.html">6.Form</a></li>
-                </ul>
-            </div>
+    <section class="breadcrumb main-content content">
+        <p><a href="flask-add-templates.html">Page précédente</a> <i class="fa fa-arrow-left"></i> <a
+                href="../../sommaire-veilles.html">Sommaire Veilles</a> <i class="fa fa-arrow-right"></i> <a
+                href="flask-template-inheritance.html">Page suivante</a></p>
+    </section>
 
-            <div class="col-3">
-                <h3>Azure</h3>
-                <a href="templates/veilles/azure900-1.html">Azure 900 - step 1</a>
-            </div>
+    <main class="veilles main-section">
 
-            <div class="col-3">
-                <h3>Git</h3>
-                <a href="templates/veilles/git.html">Git/GitHub - step 1</a>
-            </div>
-        </div>
+        <!-- section 1 installation -->
+        <section class="main-section content">
+            <h2>Static files</h2>
+            <p>They are css and js files. </p>
+            <ol>
+                <li>Create the 'static' folder and inside 2 other folders : css and js where you can put your css
+                    stylesheet and your js scrips.</li>
+                <li>In the html templates, add link to the css stylesheet : href="/static/css/styles.css"</li>
+                <li>Before the closing body tag, add the script tag with src='static/js/app.js'</li>
+                <li>Create your own palette in styles.css</li>
+                <li>Change the font family</li>
+                <li>Uses icons if it makes sense</li>
+            </ol>
+
+        </section>
+
+        <!-- Bookmarks -->
+        <section class="bookmark content">
+            <h2>Bookmarks</h2>
+            <ul>
+                <li><a href="https://www.webdevbydoing.com/absolute-relative-and-root-relative-file-paths/">Absolute /
+                        relative file path</a>
+                </li>
+                <li><a href="https://coolors.co/palettes/trending">Color palettes - coolors</a>
+                </li>
+                <li><a href="https://colorhunt.co/">Color palettes - colorhunt</a></li>
+                <li><a href="https://web.mit.edu/jmorzins/www/fonts.html">Web Safe Fonts</a></li>
+                <li><a href="https://fontawesome.com/v4/icon/cubes">Fontawesome icons</a></li>
+            </ul>
+
+        </section>
 
     </main>
 
@@ -89,8 +102,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="other.html">Intérêts</a></li>
-                    <li><a href="sommaire-veilles.html">Veilles</a></li>
-                    <li><a href="sommaire-flash-cards.html">FlashCards</a></li>
+                    <li><a href="veilles/sommaire-veilles.html">Veilles</a></li>
+                    <li><a href="flash_cards/sommaire-flash-cards.html">FlashCards</a></li>
                 </ul>
             </div>
             <div class="col-3">

@@ -314,3 +314,26 @@ body{
 .flashcards h2{
     margin-bottom: 24px;
 }
+
+
+/* ____________________Veilles_______________ */
+.breadcrumb a{
+    color: var(--dark-green);
+}
+.breadcrumb a:hover{
+    color: var(--main-green);
+}
+
+
+/* ____________________Code_________________ */
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+pre {
+    margin-bottom: 20px;
+}

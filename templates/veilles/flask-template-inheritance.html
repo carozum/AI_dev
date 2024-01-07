@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+    <title>Flask</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <p class="logo"><a href="index.html"><i class="fa fa-home fa-2x"></i></a></p>
+            <ul class="navbar">
+                <li class="navbar-link"><a href="index.html#skills">Skills</a></li>
+                <li class="navbar-link"><a href="index.html#experiences">Expériences</a></li>
+                <li class="navbar-link"><a href="index.html#formations">Formations</a></li>
+                <li class="navbar-link"><a href="https://github.com/carozum" target="_blank">Portfolio</a></li>
+                <li class="navbar-link"><a href="other.html">Intérêts</a></li>
+                <li class="navbar-link"><a href="sommaire-veilles.html">Veilles</a></li>
+                <li class="navbar-link"><a href="sommaire-flash-cards.html">FlashCards</a></li>
+            </ul>
+        </nav>
+
+        <section class="me">
+            <div class="me-infos">
+                <p class="me-adresse"><i class="fa fa-map"></i> Pays Basque - Toulouse - Remote</p>
+                <a class="me-mail" href="mailto:test-caro@gmail.com"><i class="fa fa-envelope"></i> Me contacter</a>
+                <!-- Ajouter le logo linked in -->
+
+                <a href="www.linkedin.com/in/carozum" class="me-linkedIn"><i class="fa fa-linkedin"></i> Profil
+                    LinkedIn</a>
+                <a href="www.https://github.com/carozum" class="me-github"><i class="fa fa-github"></i> Profil
+                    GitHub</a>
+            </div>
+            <div class="me-image">
+                <img src="../../assets/images/photo-caro-cv.png" alt="une photo de caroline zumbiehl souriante"
+                    class="me-photo">
+            </div>
+        </section>
+
+
+        <section class="pres bg-vert">
+            <h1 class="pres-titre">Veilles Flask</h1>
+            <p class="pres-soustitre">Step 5 - Template inheritance</p>
+            <!-- <p class=" pres-accroche mb-1"> -->
+            </p>
+        </section>
+    </header>
+
+    <section class="breadcrumb main-content content">
+        <p><a href="flask-static-files.html">Page précédente</a> <i class="fa fa-arrow-left"></i> <a
+                href="../../sommaire-veilles.html">Sommaire Veilles</a> <i class="fa fa-arrow-right"></i> <a
+                href="flask-form.html">Page suivante</a></p>
+    </section>
+
+    <main class="veilles main-section">
+
+        <section class="main-section content">
+            <h2>Create connections between the different pages</h2>
+            <ol>
+                <li>In app.py, create the routes for the other pages</li>
+                <li>In app.py, <strong>from flask import url_for</strong>. This will connect our html links to the
+                    routes in order to create links between 2 different pages.</li>
+                <li>Inside html files, links to another page should have the <strong>href ='&#123;{ url_for('add_pet')
+                        }}'</strong>. be careful, it is the NAME OF THE FUNCTION, not the name of the file or the
+                    route ! </li>
+            </ol>
+        </section>
+
+        <section class="main-section content">
+            <h2>DRY up your HTML code</h2>
+            <p>The head section in our html files is repeated in every file. Flask gives us the ability to place these
+                repeated items into their own file and then use them whenever we need to = <strong>template
+                    inheritance.</strong></p>
+            <ol>
+                <li>Create a layout.html file</li>
+                <li>Layout.html contains all that is the same in each html file. And add block to indicate
+                    where the content, the buttons... will be displayed.</li>
+                <ul>
+                    <li>&#123;% block button %}&#123;% endblock %}</li>
+                    <li>&#123;% block content %}&#123;% endblock %}</li>
+                    <li>&#123;% block link %}&#123;% endblock %}</li>
+                </ul>
+                <li>Change your html files with button block, content block...</li>
+                <ul>
+                    <li>&#123;% extends 'layout.html' %}</li>
+                    <li>&#123;% block button %}&#123;% endblock %}</li>
+                    <li>&#123;% block content %}&#123;% endblock %}</li>
+                    <li>&#123;% block link %}&#123;% endblock %}</li>
+                </ul>
+            </ol>
+            <p>This creates the structure of our page while also keeping our html DRY. Cool !</p>
+            <p>In layout.html</p>
+            <pre><code class="python">
+                        &lt;!DOCTYPE html>
+                        &lt;html>
+                        &lt;head>...&lt;/head>
+                        &lt;body>
+                            &lt;section class="main-header">
+                                &lt;a href="	&#123;{url_for('pets')}}">
+                                    &lt;h1 class="header">
+                                    &lt;i class="fas fa-paw"></i>Pet Adoption&lt;/h1>
+                                &lt;/a>
+        
+                                &#123;% block button %}
+                                &#123;% endblock %}
+                            
+                            &lt;/section>
+                            
+                            &#123;% block content %}
+                            &#123;% endblock %}
+        
+                        &lt;body>
+                        ...
+                    </code></pre>
+            <p>In index.html</p>
+            <pre><code class="python">
+                        &#123;% extends 'layout.html' %}
+        
+                        &#123;% block button %}
+                            &lt;a class="add-pet-btn" href="{{url_for('add_pet')}}" alt="Add Pet">
+                            &lt;i class="fas fa-plus">&lt;/i>
+                            Pet
+                            &lt;/a>
+                        &#123;% endblock %}
+        
+                        &#123;% block content %}
+                            &lt;section id="pet-cards">
+                            ...
+                            &lt;/section>
+                        &#123;% endblock %}     
+                    </code></pre>
+        </section>
+
+
+        <section class="main-section content">
+            <h2>Jinja</h2>
+            <p>The double curly braces &#123;{ }} let flask know that we want flask to do something. Inside of the
+                curly,
+                is an expression that will be evaluated.
+                brackets, </p>
+        </section>
+
+
+        <!-- Bookmarks -->
+        <section class="bookmark content">
+            <h2>Bookmarks</h2>
+            <ul>
+                <li><a href="https://jinja.palletsprojects.com/en/2.11.x/templates/#template-inheritance">Jinja Docs
+                        Template inheritance</a></li>
+                <li><a href="https://alexandre.alapetite.fr/doc-alex/alx_special.html">html entities to insert code in
+                        an html
+                        page.</a></li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row footer-legal">
+            <div class="col-3">
+                <h4>Plan du site</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="other.html">Intérêts</a></li>
+                    <li><a href="veilles/sommaire-veilles.html">Veilles</a></li>
+                    <li><a href="flash_cards/sommaire-flash-cards.html">FlashCards</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <p>Contenu régulièrement mis à jour. n'hésitez pas à revenir prochainement et à mettre mes veilles
+                    dans
+                    vos favorites.</p>
+            </div>
+        </div>
+        <p class="footer-end">Made with enthousiasm by @carozum</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

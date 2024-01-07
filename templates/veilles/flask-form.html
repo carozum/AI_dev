@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+    <title>Flask</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <p class="logo"><a href="index.html"><i class="fa fa-home fa-2x"></i></a></p>
+            <ul class="navbar">
+                <li class="navbar-link"><a href="index.html#skills">Skills</a></li>
+                <li class="navbar-link"><a href="index.html#experiences">Expériences</a></li>
+                <li class="navbar-link"><a href="index.html#formations">Formations</a></li>
+                <li class="navbar-link"><a href="https://github.com/carozum" target="_blank">Portfolio</a></li>
+                <li class="navbar-link"><a href="other.html">Intérêts</a></li>
+                <li class="navbar-link"><a href="sommaire-veilles.html">Veilles</a></li>
+                <li class="navbar-link"><a href="sommaire-flash-cards.html">FlashCards</a></li>
+            </ul>
+        </nav>
+
+        <section class="me">
+            <div class="me-infos">
+                <p class="me-adresse"><i class="fa fa-map"></i> Pays Basque - Toulouse - Remote</p>
+                <a class="me-mail" href="mailto:test-caro@gmail.com"><i class="fa fa-envelope"></i> Me contacter</a>
+                <!-- Ajouter le logo linked in -->
+
+                <a href="www.linkedin.com/in/carozum" class="me-linkedIn"><i class="fa fa-linkedin"></i> Profil
+                    LinkedIn</a>
+                <a href="www.https://github.com/carozum" class="me-github"><i class="fa fa-github"></i> Profil
+                    GitHub</a>
+            </div>
+            <div class="me-image">
+                <img src="../../assets/images/photo-caro-cv.png" alt="une photo de caroline zumbiehl souriante"
+                    class="me-photo">
+            </div>
+        </section>
+
+
+        <section class="pres bg-vert">
+            <h1 class="pres-titre">Veilles Flask</h1>
+            <p class="pres-soustitre">Step 6 - Connect HTML forms to my Python backend using Flask</p>
+            <!-- <p class=" pres-accroche mb-1"> -->
+            </p>
+        </section>
+    </header>
+
+    <section class="breadcrumb main-content content">
+        <p><a href="flask-template-inheritance.html">Page précédente</a> <i class="fa fa-arrow-left"></i> <a
+                href="../../sommaire-veilles.html">Sommaire Veilles</a> <i class="fa fa-arrow-right"></i> <a
+                href="#">Page suivante</a></p>
+    </section>
+
+    <main class="veilles main-section">
+
+        <section class="main-section content">
+            <h2>Connecting html form to the back end</h2>
+            <p>I create an html form. I can fill it and when I push enter or submit, I can see my choices indicated in
+                the URL.
+                So I can work with the data. </p>
+            <ul>
+                <li>We need to set the action attribute. This will be the URL we want the form to submit to.</li>
+                <li><strong>
+                        &lt;form
+                        action="&#123;{ url_for('add_pet') }}" method="POST" ></strong></li>
+                <li>The POST attribute will send our form data to our add_pet route. Then we can play with the data. But
+                    first,
+                    we need to make sure our route knows it is going to be receiving some data. </li>
+                <li>In app.py, add_pet route, change the decorator to <strong>@app.route('/add-pet', methods=['GET',
+                        'POST'])</strong></li>
+                <li>We need both because this route is used to get our addpet page and show it to the user and now will
+                    be also
+                    receiving our form data via a post.</li>
+                <li>to make sure we can see our data, import request: <strong>from flask import (Flask, render_template,
+                        url_for,
+                        request)</strong></li>
+            </ul>
+        </section>
+
+        <section class="main-section content">
+            <h2>Code for that</h2>
+
+            <pre><code>
+            @app.route('/add-pet', methods=['GET', 'POST'])
+            def add_pet():
+                print(request.form)
+                print(request.form['age'])
+                return render_template('addpet.html')
+            </code></pre>
+            <p>request.form return an immutable multi dictionary, when I fill the form (no longer passed via the URL).
+                The keys
+                come from the name attribute on the form inputs. </p>
+            <pre>
+                ImmutableMultiDict([
+                ('name', 'Médor'), ('age', '1 year'), 
+                ('breed', 'Corgy'), ('url', ''), 
+                ('color', 'Marroon'), ('size', 'small'), 
+                ('weight', '5 kg'), ('alt', ''), 
+                ('pet', 'Dog'), ('gender', 'Male'), 
+                ('spay', 'Unknown'), ('housetrained', 'Yes'),
+                ('description', "Queen's dog")])
+            </pre>
+        </section>
+
+
+        <section class="main-section content">
+            <h2>Quick review : </h2>
+            <ul>
+                <li>When a form is submitted, the browser looks at the action and method attributes on the form to see
+                    what it
+                    should do with the information. Here, we are telling flask to insert the route for the add_pet
+                    function. The
+                    browser says OK, I need to send this information from this form as a POST to this route.</li>
+                <li>The application then receives this information and now has access to the data submitted by the form
+                    because
+                    the route now accepts information or POST requests.</li>
+                <li>Now that we have our form submitting we can work on saving the data in a database and displaying on
+                    the
+                    homepage.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row footer-legal">
+            <div class="col-3">
+                <h4>Plan du site</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="other.html">Intérêts</a></li>
+                    <li><a href="veilles/sommaire-veilles.html">Veilles</a></li>
+                    <li><a href="flash_cards/sommaire-flash-cards.html">FlashCards</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <p>Contenu régulièrement mis à jour. n'hésitez pas à revenir prochainement et à mettre mes veilles
+                    dans
+                    vos favorites.</p>
+            </div>
+        </div>
+        <p class="footer-end">Made with enthousiasm by @carozum</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
