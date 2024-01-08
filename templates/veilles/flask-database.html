@@ -48,7 +48,7 @@
 
         <section class="pres bg-vert">
             <h1 class="pres-titre">Veilles Flask</h1>
-            <p class="pres-soustitre">Step 3 - Add templates</p>
+            <p class="pres-soustitre">Step 7 - SQLAlchemy connection</p>
             <!-- <p class=" pres-accroche mb-1"> -->
             </p>
         </section>
@@ -66,12 +66,11 @@
         <section class="main-section content">
             <h2>Connection to the database</h2>
             <p>Flask as a special SQLalchemy connection called Flask-SQLAlchemy:
-                <code>pip install flask-sqlalchemy</code>
             </p>
             <ul>
                 <li><code>pip install flask-sqlalchemy</code></li>
                 <li><code>pip freeze > requirements.txt</code></li>
-                <li>Create a nex file : models.py</li>
+                <li>Create a new file : models.py</li>
                 <li>Add the imports (Flask, SQLAlchemy and datetime</li>
                 <li>Move your app variable over to this file (from app.py to models.py)</li>
                 <li>Set the database filename and location (see documentation quickstart for flask-sqlalchemy)</li>
@@ -85,7 +84,7 @@
                 <li>Inside app.py change the import (no longer needed to import Flask in app.py as it is done in
                     models.py)</li>
                 <li>and delete : app = Flask(__name__) as the app is already created in models.py</li>
-                <li></li>
+
 
             </ul>
             <h2>In models.py</h2>
