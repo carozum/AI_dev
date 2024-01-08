@@ -88,13 +88,21 @@
 
         <section class="main-section content">
             <h2>Code for that</h2>
-
+            <p>In addpet.html</p>
             <pre><code>
-            @app.route('/add-pet', methods=['GET', 'POST'])
-            def add_pet():
-                print(request.form)
-                print(request.form['age'])
-                return render_template('addpet.html')
+                &lt;form
+                action="&#123;{ url_for('add_pet') }}" method="POST" >
+                    &lt;input type="text" name="age">
+                    &lt;button type="submit">OK&lt;/button>
+                &lt;/form>
+            </code></pre>
+            <p>In app.py</p>
+            <pre><code>
+                @app.route('/add-pet', methods=['GET', 'POST'])
+                def add_pet():
+                    print(request.form)
+                    print(request.form['age'])
+                    return render_template('addpet.html')
             </code></pre>
             <p>request.form return an immutable multi dictionary, when I fill the form (no longer passed via the URL).
                 The keys
